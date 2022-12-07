@@ -27,9 +27,11 @@ typedef enum {
     OS_IOS,
 } os_variant_t;
 
-void         process_wlength(const uint16_t w_length);
+void         process_wlength(const uint8_t descriptorIndex, const uint16_t wIndex, const uint16_t w_length);
 os_variant_t detected_host_os(void);
 void         erase_wlength_data(void);
+void clear_setupdump(void);
+void print_setupdump(void);
 #endif
 
 #ifdef OS_DETECTION_DEBUG_ENABLE

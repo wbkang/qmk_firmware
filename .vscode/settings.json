@@ -7,7 +7,11 @@
         "**/.build": true,
         "**/*.hex": true,
         "**/*.bin": true,
-        "**/*.uf2": true
+        "**/*.uf2": true,
+        "lib/lufa/Demos": true,
+        "lib/lufa/Projects": true,
+        "lib/lufa/LUFA/Drivers/**/UC3/": true,
+        "lib/lufa/LUFA/Drivers/**/XMEGA/": true,
     },
     "files.associations": {
         "*.h": "c",
@@ -27,5 +31,6 @@
     "python.formatting.provider": "yapf",
     "[json]": {
 	    "editor.formatOnSave": false
-    }
+    },
+    "cmake.configureOnOpen": false
 }

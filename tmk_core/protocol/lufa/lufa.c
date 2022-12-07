@@ -73,6 +73,10 @@ extern keymap_config_t keymap_config;
 #    include "raw_hid.h"
 #endif
 
+#ifdef OS_DETECTION_ENABLE
+void erase_wlength_data(void);
+#endif
+
 uint8_t keyboard_idle = 0;
 /* 0: Boot Protocol, 1: Report Protocol(default) */
 uint8_t        keyboard_protocol  = 1;
@@ -858,6 +862,7 @@ void protocol_post_init(void) {
 void protocol_pre_task(void) {
 #if !defined(NO_USB_STARTUP_CHECK)
     if (USB_DeviceState == DEVICE_STATE_Suspended) {
+
         print("[s]");
         while (USB_DeviceState == DEVICE_STATE_Suspended) {
             suspend_power_down();

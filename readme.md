@@ -1,3 +1,5 @@
+This is Woongbin's fork for his tiger80  lite. See [here](keyboards/kbdfans/tiger80/keymaps/wbk/README.md) for changes.
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)

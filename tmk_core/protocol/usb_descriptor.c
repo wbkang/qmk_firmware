@@ -1142,7 +1142,7 @@ uint16_t get_usb_descriptor(const uint16_t wValue, const uint16_t wIndex, const 
 #endif
             }
 #ifdef OS_DETECTION_ENABLE
-            process_wlength(wLength);
+            process_wlength(DescriptorIndex, wIndex, wLength);
 #endif
 
             break;

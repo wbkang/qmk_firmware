@@ -1,0 +1,225 @@
+USB Descriptor dump for tiger80 lite
+
+[Port3]  :  USB Composite Device
+
+
+Is Port User Connectable:         yes
+Is Port Debug Capable:            no
+Companion Port Number:            3
+Companion Hub Symbolic Link Name: USB#VID_0BDA&PID_0411#7&21bdfa38&0&1#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+Protocols Supported:
+ USB 1.1:                         yes
+ USB 2.0:                         yes
+ USB 3.0:                         no
+
+Device Power State:               PowerDeviceD0
+
+       ---===>Device Information<===---
+English product name: "Tiger80"
+
+ConnectionStatus:                  
+Current Config Value:              0x01  -> Device Bus Speed: Full (is not SuperSpeed or higher capable)
+Device Address:                    0x1B
+Open Pipes:                           4
+
+          ===>Device Descriptor<===
+bLength:                           0x12
+bDescriptorType:                   0x01
+bcdUSB:                          0x0200
+bDeviceClass:                      0x00  -> This is an Interface Class Defined Device
+bDeviceSubClass:                   0x00
+bDeviceProtocol:                   0x00
+bMaxPacketSize0:                   0x08 = (8) Bytes
+idVendor:                        0x4B42 = Vendor ID not listed with USB.org
+idProduct:                       0x0011
+bcdDevice:                       0x0001
+iManufacturer:                     0x01
+     English (United States)  "KBDFans"
+iProduct:                          0x02
+     English (United States)  "Tiger80"
+iSerialNumber:                     0x00
+bNumConfigurations:                0x01
+
+          ---===>Open Pipes<===---
+
+          ===>Endpoint Descriptor<===
+bLength:                           0x07
+bDescriptorType:                   0x05
+bEndpointAddress:                  0x81  -> Direction: IN - EndpointID: 1
+bmAttributes:                      0x03  -> Interrupt Transfer Type
+wMaxPacketSize:                  0x0008 = 0x08 bytes
+bInterval:                         0x01
+
+          ===>Endpoint Descriptor<===
+bLength:                           0x07
+bDescriptorType:                   0x05
+bEndpointAddress:                  0x82  -> Direction: IN - EndpointID: 2
+bmAttributes:                      0x03  -> Interrupt Transfer Type
+wMaxPacketSize:                  0x0020 = 0x20 bytes
+bInterval:                         0x01
+
+          ===>Endpoint Descriptor<===
+bLength:                           0x07
+bDescriptorType:                   0x05
+bEndpointAddress:                  0x83  -> Direction: IN - EndpointID: 3
+bmAttributes:                      0x03  -> Interrupt Transfer Type
+wMaxPacketSize:                  0x0020 = 0x20 bytes
+bInterval:                         0x01
+
+          ===>Endpoint Descriptor<===
+bLength:                           0x07
+bDescriptorType:                   0x05
+bEndpointAddress:                  0x03  -> Direction: OUT - EndpointID: 3
+bmAttributes:                      0x03  -> Interrupt Transfer Type
+wMaxPacketSize:                  0x0020 = 0x20 bytes
+bInterval:                         0x01
+
+       ---===>Full Configuration Descriptor<===---
+
+          ===>Configuration Descriptor<===
+bLength:                           0x09
+bDescriptorType:                   0x02
+wTotalLength:                    0x005B  -> Validated
+bNumInterfaces:                    0x03
+bConfigurationValue:               0x01
+iConfiguration:                    0x00
+bmAttributes:                      0xA0  -> Bus Powered
+  -> Remote Wakeup
+MaxPower:                          0xFA = 500 mA
+
+          ===>Interface Descriptor<===
+bLength:                           0x09
+bDescriptorType:                   0x04
+bInterfaceNumber:                  0x00
+bAlternateSetting:                 0x00
+bNumEndpoints:                     0x01
+bInterfaceClass:                   0x03  -> HID Interface Class
+bInterfaceSubClass:                0x01
+bInterfaceProtocol:                0x01
+iInterface:                        0x00
+
+          ===>HID Descriptor<===
+bLength:                           0x09
+bDescriptorType:                   0x21
+bcdHID:                          0x0111
+bCountryCode:                      0x00
+bNumDescriptors:                   0x01
+bDescriptorType:                   0x22 (Report Descriptor)
+wDescriptorLength:               0x0040
+
+          ===>Endpoint Descriptor<===
+bLength:                           0x07
+bDescriptorType:                   0x05
+bEndpointAddress:                  0x81  -> Direction: IN - EndpointID: 1
+bmAttributes:                      0x03  -> Interrupt Transfer Type
+wMaxPacketSize:                  0x0008 = 0x08 bytes
+bInterval:                         0x01
+
+          ===>Interface Descriptor<===
+bLength:                           0x09
+bDescriptorType:                   0x04
+bInterfaceNumber:                  0x01
+bAlternateSetting:                 0x00
+bNumEndpoints:                     0x01
+bInterfaceClass:                   0x03  -> HID Interface Class
+bInterfaceSubClass:                0x00
+bInterfaceProtocol:                0x00
+iInterface:                        0x00
+
+          ===>HID Descriptor<===
+bLength:                           0x09
+bDescriptorType:                   0x21
+bcdHID:                          0x0111
+bCountryCode:                      0x00
+bNumDescriptors:                   0x01
+bDescriptorType:                   0x22 (Report Descriptor)
+wDescriptorLength:               0x006D
+
+          ===>Endpoint Descriptor<===
+bLength:                           0x07
+bDescriptorType:                   0x05
+bEndpointAddress:                  0x82  -> Direction: IN - EndpointID: 2
+bmAttributes:                      0x03  -> Interrupt Transfer Type
+wMaxPacketSize:                  0x0020 = 0x20 bytes
+bInterval:                         0x01
+
+          ===>Interface Descriptor<===
+bLength:                           0x09
+bDescriptorType:                   0x04
+bInterfaceNumber:                  0x02
+bAlternateSetting:                 0x00
+bNumEndpoints:                     0x02
+bInterfaceClass:                   0x03  -> HID Interface Class
+bInterfaceSubClass:                0x00
+bInterfaceProtocol:                0x00
+iInterface:                        0x00
+
+          ===>HID Descriptor<===
+bLength:                           0x09
+bDescriptorType:                   0x21
+bcdHID:                          0x0111
+bCountryCode:                      0x00
+bNumDescriptors:                   0x01
+bDescriptorType:                   0x22 (Report Descriptor)
+wDescriptorLength:               0x0022
+
+          ===>Endpoint Descriptor<===
+bLength:                           0x07
+bDescriptorType:                   0x05
+bEndpointAddress:                  0x83  -> Direction: IN - EndpointID: 3
+bmAttributes:                      0x03  -> Interrupt Transfer Type
+wMaxPacketSize:                  0x0020 = 0x20 bytes
+bInterval:                         0x01
+
+          ===>Endpoint Descriptor<===
+bLength:                           0x07
+bDescriptorType:                   0x05
+bEndpointAddress:                  0x03  -> Direction: OUT - EndpointID: 3
+bmAttributes:                      0x03  -> Interrupt Transfer Type
+wMaxPacketSize:                  0x0020 = 0x20 bytes
+bInterval:                         0x01
+
+
+
+----
+
+String descriptor requests
+
+macos 1
+
+> idx: 0 descriptorIndex 2 wIndex 1033 wLength 2
+> idx: 1 descriptorIndex 2 wIndex 1033 wLength 10
+> idx: 2 descriptorIndex 1 wIndex 1033 wLength 2
+> idx: 3 descriptorIndex 1 wIndex 1033 wLength 10
+> idx: 4 descriptorIndex 0 wIndex 0 wLength 101
+> idx: 5 descriptorIndex 0 wIndex 0 wLength FF
+
+macos 2 
+idx: 0 descriptorIndex 2 wIndex 1033 wLength 2
+idx: 1 descriptorIndex 2 wIndex 1033 wLength 10
+idx: 2 descriptorIndex 1 wIndex 1033 wLength 2
+idx: 3 descriptorIndex 1 wIndex 1033 wLength 10
+idx: 4 descriptorIndex 0 wIndex 0 wLength 101
+
+Windows 
+> idx: 0 descriptorIndex 0 wIndex 0 wLength FF
+> idx: 1 descriptorIndex 2 wIndex 1033 wLength FF
+> idx: 2 descriptorIndex 2 wIndex 1033 wLength 4
+> idx: 3 descriptorIndex 2 wIndex 1033 wLength 10
+> idx: 4 descriptorIndex 2 wIndex 1033 wLength 4
+> idx: 5 descriptorIndex 2 wIndex 1033 wLength 10
+> idx: 6 descriptorIndex 2 wIndex 1033 wLength 4
+> idx: 7 descriptorIndex 2 wIndex 1033 wLength 10
+> idx: 8 descriptorIndex 1 wIndex 1033 wLength 100
+> idx: 9 descriptorIndex 2 wIndex 1033 wLength 100
+
+> idx: 0 descriptorIndex 0 wIndex 0 wLength FF
+> idx: 1 descriptorIndex 2 wIndex 1033 wLength FF
+> idx: 2 descriptorIndex 2 wIndex 1033 wLength 4
+> idx: 3 descriptorIndex 2 wIndex 1033 wLength 10
+> idx: 4 descriptorIndex 2 wIndex 1033 wLength 4
+> idx: 5 descriptorIndex 2 wIndex 1033 wLength 10
+> idx: 6 descriptorIndex 2 wIndex 1033 wLength 4
+> idx: 7 descriptorIndex 2 wIndex 1033 wLength 10
+> idx: 8 descriptorIndex 1 wIndex 1033 wLength 100
+> idx: 9 descriptorIndex 2 wIndex 1033 wLength 100

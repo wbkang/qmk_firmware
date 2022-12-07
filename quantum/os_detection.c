@@ -22,9 +22,22 @@
 #    include "eeconfig.h"
 #    include "eeprom.h"
 #    include "print.h"
+#include <quantum/logging/debug.h>
 
 #    define STORED_USB_SETUPS 50
 #    define EEPROM_USER_OFFSET (uint8_t*)EECONFIG_SIZE
+
+#define MAX_USB_SETUPINFO 100
+
+struct usb_setupinfo {
+    uint8_t descriptorIndex;
+    uint16_t wIndex;
+    uint16_t wLength;
+};
+
+struct usb_setupinfo setupdump[MAX_USB_SETUPINFO] = {0};
+
+unsigned int setup_data_count = 0;
 
 uint16_t usb_setups[STORED_USB_SETUPS];
 #endif
@@ -82,7 +95,9 @@ void make_guess(void) {
     }
 }
 
-void process_wlength(const uint16_t w_length) {
+
+
+void process_wlength(const uint8_t descriptorIndex, const uint16_t wIndex, const uint16_t w_length) {
 #    ifdef OS_DETECTION_DEBUG_ENABLE
     usb_setups[setups_data.count] = w_length;
 #    endif
@@ -95,8 +110,38 @@ void process_wlength(const uint16_t w_length) {
     } else if (w_length == 0xFF) {
         setups_data.cnt_ff++;
     }
+
+#ifdef OS_DETECTION_DEBUG_ENABLE
+    if (setup_data_count < MAX_USB_SETUPINFO) {
+        setupdump[setup_data_count].descriptorIndex = descriptorIndex;
+        setupdump[setup_data_count].wIndex = wIndex;
+        setupdump[setup_data_count].wLength = w_length;
+        setup_data_count++;
+    }
+#endif
     make_guess();
 }
+
+#ifdef OS_DETECTION_DEBUG_ENABLE
+void clear_setupdump() {
+    setup_data_count = 0;
+}
+
+void print_setupdump() {
+    dprintf("begin print_setupdump()\n");
+    for (int i = 0; i < setup_data_count; i++) {
+        dprintf("idx: %u descriptorIndex %X wIndex %u wLength %X\n",
+            i, 
+            setupdump[i].descriptorIndex,
+            setupdump[i].wIndex,
+            setupdump[i].wLength);
+    }
+    dprintf("end print_setupdump()\n");
+}
+#else
+void clear_setupdump(void) {}
+void print_setupdump(void) {}
+#endif
 
 os_variant_t detected_host_os(void) {
     return setups_data.detected_os;
